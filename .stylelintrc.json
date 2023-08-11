@@ -1,0 +1,9 @@
+{
+  "extends": ["stylelint-config-prettier"],
+  "rules": {
+    "color-no-invalid-hex": true,
+    "declaration-no-important": null,
+    "length-zero-no-unit": null
+  },
+  "customSyntax": "postcss-less"
+}

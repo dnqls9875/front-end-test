@@ -1,0 +1,158 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+._750(@v) {
+  @result: (@v / 750 * 100%);
+}
+
+.font(@size) {
+  @result: (@size / 750 * 100vw);
+}
+
+.pct(@v, @t) {
+  @result: (@v / @t*100%);
+}
+
+.kolon-cttd-guide {
+  width: 100%;
+  position: relative;
+  font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic",
+    "맑은고딕", "Dotum", "돋움", "Gulim", "굴림", "Arial", sans-serif;
+
+  img {
+    max-width: none;
+  }
+
+  .full-image {
+    display: block;
+    width: 100%;
+    border: 0;
+  }
+
+  .full-fix-image {
+    display: block;
+    width: 100%;
+    border: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .kolon-cttd-fix {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .kolon-cttd-fix-link {
+    position: absolute;
+    display: block;
+    z-index: 100;
+  }
+
+  .kolon-cttd-fix-text {
+    overflow: hidden;
+    border: 0;
+    position: absolute;
+    z-index: -1;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+  }
+
+  .kolon-cttd-ctns {
+    position: relative;
+  }
+
+  .full-fix-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: block;
+  }
+
+  &.kolon-cttd-guide--hide {
+    overflow: hidden;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.kolon-cttd-tab(@tabHeight: 62px) {
+  width: 100%;
+  height: @tabHeight;
+
+  &__inner {
+    position: static;
+    width: 100%;
+    height: @tabHeight;
+    background: #1f1f1f;
+
+    &.isFixed {
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      z-index: 1000;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    margin: 0 auto;
+    height: @tabHeight;
+    display: flex;
+    padding: 0;
+  }
+
+  &__item {
+    width: 20%;
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    position: relative;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-weight: 400;
+    font-size: 13px;
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.5;
+    transition: opacity 0.3s linear;
+    z-index: 4;
+  }
+}

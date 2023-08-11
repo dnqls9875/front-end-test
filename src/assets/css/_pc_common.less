@@ -1,0 +1,164 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+._1170(@v) {
+  @result: (@v / 1170 * 100%);
+}
+
+.pct(@v, @t) {
+  @result: (@v / @t*100%);
+}
+
+.img-aos-pos(@left, @top, @imgWidth, @wrapHeight ) {
+  left: ._1170(@left) [ @result];
+  top: .pct(@top, @wrapHeight) [ @result];
+  width: ._1170(@imgWidth) [ @result];
+}
+
+.special-detail:first-child {
+  position: relative;
+  z-index: 2;
+}
+
+.kfOgUl {
+  padding: 0;
+}
+
+.hausys-cttd-guide {
+  font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic",
+    "맑은고딕", "Dotum", "돋움", "Gulim", "굴림", "Arial", sans-serif;
+  width: 100%;
+  max-width: 1170px;
+  min-width: 970px;
+  margin: 0px auto;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    max-width: none;
+  }
+
+  &.full-width {
+    max-width: inherit;
+
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .full-image {
+    display: block;
+    width: 100%;
+    border: 0;
+  }
+
+  .hausys-cttd-fix {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hausys-cttd-fix-link {
+    position: absolute;
+    display: block;
+    z-index: 100;
+  }
+
+  .hausys-cttd-fix-text {
+    overflow: hidden;
+    border: 0;
+    position: absolute;
+    z-index: -1;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+  }
+
+  .hausys-cttd-inner {
+    width: 970px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hausys-cttd-ctns {
+    position: relative;
+  }
+}
+
+.hausys-cttd-tab(@tabHeight: 82px) {
+  width: 100%;
+  height: @tabHeight;
+  background-color: #1f1f1f;
+
+  &__inner {
+    position: static;
+    width: 100%;
+    height: @tabHeight;
+    background-color: #1f1f1f;
+
+    &.isFixed {
+      position: fixed;
+      left: 0;
+      top: 71px;
+      right: 0;
+      z-index: 1000;
+    }
+  }
+
+  &__list {
+    width: 1000px;
+    height: @tabHeight;
+    margin: 0 auto;
+    display: flex;
+    padding: 0;
+  }
+
+  &__item {
+    width: 20%;
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    position: relative;
+  }
+
+  &__link {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+    z-index: 4;
+    display: block;
+  }
+}
