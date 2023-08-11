@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lf generator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" charset="utf-8"></script>
+    <script src="//img.lfmall.co.kr/static/202204260245/frontoffice/planning/js/jquery.lazyload.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://m.lfmall.co.kr/mfront/common/css/w.css?date=20171018" />
+    <script src="/assets/lf_files/test.js"></script>
+    @@include('./editor/_style.html')
+  </head>
+  <body>
+    <div id="app">
+      @@include('./editor/_forms.html',{ "isWide" : "", "displayType" : "mobile" })
+      <div class="preview wrap"></div>
+      @@include('./editor/_tools.html')
+    </div>
+    <script type="text/javascript" src="/assets/js/planCommon.js"></script>
+    <script src="/assets/js/workEditor.js"></script>
+  </body>
+</html>

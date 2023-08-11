@@ -1,0 +1,513 @@
+@@include('./_layout/m/header.html')
+<link rel="stylesheet" href="//img.lfmall.co.kr/file/WAS/display/Planning/plan_design/css/m/default.css?v220829" />
+
+<div class="plan is-mobile plan-guide">
+  <!--
+    중앙정렬.
+    좌, 우 ( 60/750*100 )% 의 여백을 갖고, pagination 을 포함함.
+    plan-vw-resize 는 불필요.
+
+    plan-swiper--center-min 을 포함하는 경우 ( 40/750*100 )% 여백을 갖음.
+
+    plan-swiper--right 는 좌측 60, 우측 0
+    plan-swiper--right-min 을 포함하면 40 / 0
+  -->
+
+  <!--
+      모바일 메인 슬라이드
+      png커버가 위로 올라오는 형태
+    -->
+  <div class="ctns" style="padding-top: 2vw">
+    <div class="fix">
+      <img src="//img.lfmall.co.kr/file/WAS/display/Planning/65675/m_cover.png" style="position: absolute; left: 0; top: 0; z-index: 2" alt="" />
+      <div class="plan-swiper plan-swiper-main plan-swiper--full">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/65675/m_main_01.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/65675/m_main_02.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/65675/m_main_03.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="//img.lfmall.co.kr/file/WAS/display/Planning/65675/m_cover.png" class="cover" alt="" />
+      <img alt="" src="//img.lfmall.co.kr/file/WAS/display/Planning/65675/65675_m_01.jpg" class="full-image" />
+    </div>
+  </div>
+
+  <div class="ctns">
+    <div class="fix">
+      <div class="plan-swiper plan-swiper-01 plan-swiper--center">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/60643/210812/m1.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/60643/210812/m2.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/60643/210812/m3.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/60643/210812/m4.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <img alt="" src="//img.lfmall.co.kr/file/WAS/display/Planning/60643/210812/60643_m_03.jpg" class="full-image" />
+    </div>
+  </div>
+
+  <!--
+    좌우 풀.
+    좌우 여백 없고, 일부가 우측에 보임.
+    plan-vw-resize 필요.
+
+    swiper options 중 slidesPerView 옵션이 없으면, 좌우 꽉찬 슬라이드가 됨.
+  -->
+  <div class="ctns">
+    <div class="fix">
+      <div class="plan-swiper plan-swiper-02 plan-swiper--full">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63666/63666_m_s_01_01.jpg" alt="" class="plan-vw-resize" />
+            </div>
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63666/63666_m_s_01_02.jpg" alt="" class="plan-vw-resize" />
+            </div>
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63666/63666_m_s_01_03.jpg" alt="" class="plan-vw-resize" />
+            </div>
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63666/63666_m_s_01_04.jpg" alt="" class="plan-vw-resize" />
+            </div>
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63666/63666_m_s_01_05.jpg" alt="" class="plan-vw-resize" />
+            </div>
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63666/63666_m_s_01_06.jpg" alt="" class="plan-vw-resize" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <img alt="" src="//img.lfmall.co.kr/file/WAS/display/Planning/63666/63666_m_03.jpg" class="full-image" />
+    </div>
+  </div>
+
+  <!--
+    썸네일 유형
+  -->
+  <div class="ctns">
+    <div class="fix">
+      <div class="plan-swiper plan-swiper-04 plan-swiper--thm plan-swiper--center plan-swiper--center-min">
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63994/63994_m_s_01.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63994/63994_m_s_02.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63994/63994_m_s_03.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63994/63994_m_s_04.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63994/63994_m_s_05.jpg" alt="" />
+            </div>
+          </div>
+          <ul class="swiper-img-pagination">
+            <li class="swiper-img-pagination-item">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63994/63994_m_thm_01.jpg" alt="" />
+            </li>
+            <li class="swiper-img-pagination-item">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63994/63994_m_thm_02.jpg" alt="" />
+            </li>
+            <li class="swiper-img-pagination-item">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63994/63994_m_thm_03.jpg" alt="" />
+            </li>
+            <li class="swiper-img-pagination-item">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63994/63994_m_thm_04.jpg" alt="" />
+            </li>
+            <li class="swiper-img-pagination-item">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63994/63994_m_thm_05.jpg" alt="" />
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <img alt="" src="//img.lfmall.co.kr/file/WAS/display/Planning/63994/63994_m_07.jpg" class="full-image" />
+    </div>
+  </div>
+  <!--
+    썸네일 유형 B 타입
+  -->
+  <div class="ctns">
+    <div class="fix">
+      <div class="plan-swiper plan-swiper-06 plan-swiper--thm-full plan-swiper--full">
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63835/63835_m_s_02_01.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63835/63835_m_s_02_02.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63835/63835_m_s_02_03.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63835/63835_m_s_02_04.jpg" alt="" />
+            </div>
+          </div>
+          <ul class="swiper-img-pagination">
+            <li class="swiper-img-pagination-item">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63835/63835_m_s_02_thm_01.jpg" alt="" />
+            </li>
+            <li class="swiper-img-pagination-item">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63835/63835_m_s_02_thm_02.jpg" alt="" />
+            </li>
+            <li class="swiper-img-pagination-item">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63835/63835_m_s_02_thm_03.jpg" alt="" />
+            </li>
+            <li class="swiper-img-pagination-item">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63835/63835_m_s_02_thm_04.jpg" alt="" />
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-button-prev img-bg-gray"></div>
+        <div class="swiper-button-next img-bg-gray"></div>
+      </div>
+      <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63835/63835_m_04.jpg" alt="" class="full-image" />
+    </div>
+  </div>
+  <!--
+    썸네일 혼합형
+    .fix 에 배경및 여백은 바닥 이미지 잘못 잘라서 넣어 놓은 것임..ㅡㅡ;
+  -->
+  <div class="fix" style="padding-bottom: 30px; background-color: #fff">
+    <div class="plan-swiper plan-swiper-05 plan-swiper--center plan-swiper--center-min">
+      <!-- Slider main container -->
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="plan-inner-swiper plan-swiper-05-01 plan-swiper--thm">
+              <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63665/63665_m_s_11_01.jpg" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63665/63665_m_s_11_02.jpg" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63665/63665_m_s_11_03.jpg" alt="" />
+                  </div>
+                </div>
+                <ul class="swiper-img-pagination swiper-img-pagination--left">
+                  <li class="swiper-img-pagination-item">
+                    <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63665/63665_m_s_11_thm_01.jpg" alt="" />
+                  </li>
+                  <li class="swiper-img-pagination-item">
+                    <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63665/63665_m_s_11_thm_02.jpg" alt="" />
+                  </li>
+                  <li class="swiper-img-pagination-item">
+                    <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63665/63665_m_s_11_thm_03.jpg" alt="" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="plan-inner-swiper plan-swiper-05-02 plan-swiper--thm">
+              <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63665/63665_m_s_12_01.jpg" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63665/63665_m_s_12_02.jpg" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63665/63665_m_s_12_03.jpg" alt="" />
+                  </div>
+                </div>
+                <ul class="swiper-img-pagination swiper-img-pagination--left">
+                  <li class="swiper-img-pagination-item">
+                    <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63665/63665_m_s_12_thm_01.jpg" alt="" />
+                  </li>
+                  <li class="swiper-img-pagination-item">
+                    <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63665/63665_m_s_12_thm_02.jpg" alt="" />
+                  </li>
+                  <li class="swiper-img-pagination-item">
+                    <img src="//img.lfmall.co.kr/file/WAS/display/Planning/63665/63665_m_s_12_thm_03.jpg" alt="" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <img alt="" src="//img.lfmall.co.kr/file/WAS/display/Planning/63665/63665_m_23.jpg" class="full-image" />
+  </div>
+
+  <!-- 상품유형. -->
+  <div class="ctns">
+    <div class="fix">
+      <div class="plan-swiper plan-swiper-03 plan-swiper--prd">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="javascript:void(0);" class="swiper-slide-link" onclick="cfGoProductDetail('상품코드','','','IT0701','','기획전번호','','10');">
+                <img
+                  class="plan-vw-resize"
+                  src="//img.lfmall.co.kr/file/WAS/display/Planning/63666/63666_m_s_04_01.jpg"
+                  alt="[셀럽 Pick] [H20 캔버스토트] 베이지 가죽 배색 토트백 미디움"
+                />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0);" class="swiper-slide-link" onclick="cfGoProductDetail('상품코드','','','IT0701','','기획전번호','','10');">
+                <img class="plan-vw-resize" src="//img.lfmall.co.kr/file/WAS/display/Planning/63666/63666_m_s_04_02.jpg" alt="카키 로고패턴 가죽 토트백" />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0);" class="swiper-slide-link" onclick="cfGoProductDetail('상품코드','','','IT0701','','기획전번호','','10');">
+                <img class="plan-vw-resize" src="//img.lfmall.co.kr/file/WAS/display/Planning/63666/63666_m_s_04_03.jpg" alt="[HARIATO] 카키 헤리아토 패턴 미니 크로스백" />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0);" class="swiper-slide-link" onclick="cfGoProductDetail('상품코드','','','IT0701','','기획전번호','','10');">
+                <img class="plan-vw-resize" src="//img.lfmall.co.kr/file/WAS/display/Planning/63666/63666_m_s_04_04.jpg" alt="[HARIATO] 그레이 헤리아토 패턴 배색 미니크로스백" />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0);" class="swiper-slide-link" onclick="cfGoProductDetail('상품코드','','','IT0701','','기획전번호','','10');">
+                <img
+                  class="plan-vw-resize"
+                  src="//img.lfmall.co.kr/file/WAS/display/Planning/63666/63666_m_s_04_05.jpg"
+                  alt="[HARIATO] 그레이 시그니처 헤리아토 패턴 미니 버킷백"
+                />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0);" class="swiper-slide-link" onclick="cfGoProductDetail('상품코드','','','IT0701','','기획전번호','','10');">
+                <img
+                  class="plan-vw-resize"
+                  src="//img.lfmall.co.kr/file/WAS/display/Planning/63666/63666_m_s_04_06.jpg"
+                  alt="[HARIATO] 카키 시그니처 패턴 폰케이스 수납 초미니 크로스백"
+                />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0);" class="swiper-slide-link" onclick="cfGoProductDetail('상품코드','','','IT0701','','기획전번호','','10');">
+                <img
+                  class="plan-vw-resize"
+                  src="//img.lfmall.co.kr/file/WAS/display/Planning/63666/63666_m_s_04_07.jpg"
+                  alt="[휴대폰 수납][HARIATO] 그레이 시그니처 패턴 가죽 미니 마이크로백"
+                />
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="javascript:void(0);" class="swiper-slide-link" onclick="cfGoProductDetail('상품코드','','','IT0701','','기획전번호','','10');">
+                <img class="plan-vw-resize" src="//img.lfmall.co.kr/file/WAS/display/Planning/63666/63666_m_s_04_08.jpg" alt="브라운 패턴배색 가죽 미니크로스백" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <img alt="" src="//img.lfmall.co.kr/file/WAS/display/Planning/63666/63666_m_09.jpg" class="full-image" />
+    </div>
+  </div>
+
+  <!-- 옆으로 흐르는 유형의 슬라이드
+  만약 반대쪽으로(>>) 흐르게 될 경우 container에  dir="rtl" 추가
+  -->
+  <div class="ctns">
+    <div class="fix">
+      <img alt="" src="//img.lfmall.co.kr/file/WAS/display/Planning/66535/66535_m_01.jpg" class="full-image" />
+    </div>
+  </div>
+  <div class="ctns">
+    <div class="fix">
+      <div class="plan-swiper plan-swiper-07 plan-swiper--full" style="top: 25%">
+        <div class="swiper-container swiper-no-swiping">
+          <div class="swiper-wrapper" style="transition-timing-function: linear">
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/66535/m_main.jpg" alt="" class="plan-vw-resize" />
+            </div>
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/66535/m_main.jpg" alt="" class="plan-vw-resize" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <img alt="" src="//img.lfmall.co.kr/file/WAS/display/Planning/66535/mcover.png" class="cover" />
+      <img alt="" src="//img.lfmall.co.kr/file/WAS/display/Planning/66535/66535_m_02.jpg" class="full-image" />
+    </div>
+  </div>
+
+  <!-- 
+  mobile swiper-button default
+-->
+  <div class="ctns" style="padding-top: 10%; background-color: #fff">
+    <div class="fix">
+      <div class="plan-swiper plan-swiper-08 plan-swiper--center">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/72165/72165_slide2_01.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/72165/72165_slide2_02.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/72165/72165_slide2_03.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="//img.lfmall.co.kr/file/WAS/display/Planning/72165/72165_slide2_04.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev img-bg"></div>
+        <div class="swiper-button-next img-bg"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <img alt="" src="//img.lfmall.co.kr/file/WAS/display/Planning/72165/72165_m_12.jpg" class="full-image" />
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="//img.lfmall.co.kr/file/WAS/display/Planning/plan_design/js/planCommon.js?v210817"></script>
+
+<script>
+  var sw = planSwipers('.plan-guide', {
+    options: {
+      isResize: true, // 모바일에서 true 로 셋팅하면 plan-vw-resize 클래스를 갖는 이미지에 vw 값을 지정함.
+      isLocal: true, // items.area 를 기준으로 페이징 등 요소를 찾도록 함.( default : false )
+    },
+    items: [
+      {
+        area: '.plan-swiper-main',
+        options: {
+          speed: 1000,
+          effect: 'fade',
+        },
+      },
+      {
+        area: '.plan-swiper-01',
+      },
+      {
+        area: '.plan-swiper-02',
+        options: {
+          slidesPerView: 'auto',
+        },
+      },
+
+      {
+        area: '.plan-swiper-03',
+        options: {
+          slidesPerView: 'auto',
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'progressbar',
+          },
+        },
+      },
+      // 썸네일 유형.
+      {
+        area: '.plan-swiper-04',
+        options: {
+          pagination: {
+            el: '.swiper-img-pagination',
+            type: 'custom',
+          },
+        },
+      },
+      // mix 썸네일 유형.
+      {
+        area: '.plan-swiper-05',
+        options: {
+          loop: false, // 내부에 swiper 가 있으므로 별도 이벤트 처리가 난해하므로 loop 를 막음.
+          autoplay: {
+            disableOnInteraction: true, // 사용자 편의를 위해 사용자 이벤트가 발생한 뒤로는 autoplay 를 끔.
+          },
+        },
+      },
+      // mix 썸네일 내부 스와이퍼.
+      {
+        area: '.plan-swiper-05-01',
+        options: {
+          allowTouchMove: false, // 터치 이벤트를 막는다.
+          pagination: {
+            el: '.swiper-img-pagination',
+            type: 'custom',
+          },
+        },
+      },
+      // mix 썸네일 내부 스와이퍼.
+      {
+        area: '.plan-swiper-05-02',
+        options: {
+          allowTouchMove: false, // 터치 이벤트를 막는다.
+          pagination: {
+            el: '.swiper-img-pagination',
+            type: 'custom',
+          },
+        },
+      },
+      // 썸네일 유형 2
+      {
+        area: '.plan-swiper-06',
+        options: {
+          pagination: {
+            el: '.swiper-img-pagination',
+            type: 'custom',
+          },
+        },
+      },
+      // 옆으로 흐르는 유형
+      {
+        area: '.plan-swiper-07',
+        options: {
+          speed: 10000,
+          slidesPerView: 'auto',
+          autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+          },
+        },
+      },
+      //swiper-button default
+      {
+        area: '.plan-swiper-08',
+      },
+    ],
+  });
+</script>
+@@include('./_layout/m/footer.html')

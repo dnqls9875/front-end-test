@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lf generator</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" charset="utf-8"></script>
+  <script src="//img.lfmall.co.kr/static/202204260245/frontoffice/planning/js/jquery.lazyload.min.js"></script>
+
+  <script src="/assets/lf_files/test.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div class="inputs" style="position: fixed; left:0; right: 0; top: 0; height: 20px; background:#fff; z-index: 10">
+      <input type="checkbox" id="isWide" checked /> <label for="isWide">pc:1240px</label>
+      <input type="text" value="70165" maxlength="5" placeholder="기획전번호" id="planNumber" />
+      <input type="radio" name="displayType" id="pc" value="pc" checked /> <label for="pc">PC</label>
+      <input type="radio" name="displayType" id="mobile" value="mobile" /> <label for="mobile">mobile</label>
+      <input type="text" value="15" placeholder="이미지수" id="imagesLength" />
+      <input type="text" value="" placeholder="추가 이미지 폴더(/220202)" id="customDirectory" />
+      <button id="btnDone">done</button>
+      <button id="btnCopy">copy</button>
+      <!-- <button id="btnReset">reset</button> -->
+    </div>
+    <code>
+      <pre id="output"></pre>
+    </code>
+    <div class="preview wrap">
+
+    </div>
+  </div>
+  <script type="text/javascript" src="/assets/js/planCommon.js"></script>
+  <script src="/assets/js/workEditor.js" ></script>
+
+
+</body>
+</html>

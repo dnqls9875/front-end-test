@@ -1,0 +1,41 @@
+@@include('./_layout/m/header.html')
+<link rel="stylesheet" href="//img.lfmall.co.kr/file/WAS/display/Planning/plan_design/css/m/default.css?v230223" />
+<style>
+  html,
+  body {
+    overflow: hidden;
+  }
+  #child-iframe {
+    width: 100%;
+  }
+</style>
+<script type="text/javascript">
+  window.addEventListener('load', function () {
+    let message = { height: document.body.scrollHeight, width: document.body.scrollWidth };
+
+    window.top.postMessage(message, '*');
+  });
+</script>
+<div class="plan is-mobile plan-00000">
+  <iframe id="child-iframe" src="https://forms.gle/NMYqvFVnAbq8Sisi8"></iframe>
+</div>
+
+<script type="text/javascript" src="//img.lfmall.co.kr/file/WAS/display/Planning/plan_design/js/planCommon.v2.js?v230223"></script>
+<script>
+  let iframe = document.querySelector('#child-iframe');
+
+  window.addEventListener(
+    'message',
+    function (e) {
+      let message = e.data;
+
+      iframe.style.height = message.height + 'px';
+      iframe.style.width = message.width + 'px';
+
+      console.log('height: ', iframe.style.height);
+      console.log('height: ', iframe.style.width);
+    },
+    false,
+  );
+</script>
+@@include('./_layout/m/footer.html')

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LF images PURGE</title>
+    <style>
+      .purge-wrap {
+        position: relative;
+        width: 600px;
+        margin: 0 auto;
+      }
+      .textarea {
+        width: 500px;
+        height: 200px;
+      }
+      .purge-list {
+        width: 500px;
+        padding: 0;
+      }
+      .purge-item {
+        display: flex;
+        justify-content: space-between;
+      }
+      .submit {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .reset {
+        position: absolute;
+        right: 0;
+        top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <strong style="color: red">CROS 이슈로 실패함. 방법이 없는듯...</strong>
+    <h1>images Purge system.</h1>
+    <ul>
+      <li>여러장의 이미지를 한번에 purge 해야 할때 사용 합니다.</li>
+      <li>"//img.lfmall.co.kr/file/WAS/display/Planning/" 을 제외한 경로/파일명을 입력 합니다.</li>
+      <li>여러개인 경우 구분은 ";" 를 사용 합니다.</li>
+      <li>ex : 76670/76670_w_03.jpg;76670/76670_w_04.jpg;76670/76670_w_05.jpg</li>
+      <li>편의를 위해 개인용도로 만든 것이라 별도의 유효성 체크를 하지 않으므로 엄격하게 규칙을 따라 주시기 바랍니다.</li>
+    </ul>
+    <div id="purge"></div>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      const root = ReactDOM.createRoot(document.querySelector('#purge'));
+      const purgeAPI = 'https://openapi.cloudn.co.kr/cdnservice/purge/PurgeExecution';
+      function App() {
+        const { useState } = React;
+        const [images, setImages] = useState([]);
+        const [insertText, setInsertText] = useState('');
+        const [isDisable, setIsDisable] = useState(false);
+        const insertChange = (event) => {
+          const value = event.target.value;
+          const changeArray = value
+            .replace(/\s/g, '')
+            .split(';')
+            .filter((item) => item !== undefined && item !== null && item !== '')
+            .map((item) => [`/file/WAS/display/Planning/${item}`, 'ready']);
+          setImages(changeArray);
+          setInsertText(value);
+        };
+
+        function apiCall() {
+          setIsDisable(true);
+          const actionDate = new Date().toISOString(); // ISO 8601
+          // const postData = {
+          //   api_request: {
+          //     common: {
+          //       user_info: {
+          //         user_id: 'lfmalladmin',
+          //         passwd: 'lfmalladmin1',
+          //       },
+          //       action_date: actionDate,
+          //       version: '1.0.0',
+          //       service_name: 'cdn',
+          //     },
+          //     data: {
+          //       action: 'purge',
+          //       action_info: {
+          //         purge_object: {
+          //           purge_list: {
+          //             purge_url: ['/file/WAS/display/Planning/71509/71509_w_02_12.jpg', '/file/WAS/display/Planning/71509/71509_w_01_12.jpg'],
+          //           },
+          //           purge_domain: 'https://img.lfmall.co.kr',
+          //         },
+          //         client_type: 'web',
+          //       },
+          //     },
+          //   },
+          // };
+          // CROS 이슈 테스트... 안됨....
+          // fetch('https://openapi.cloudn.co.kr/cdnservice/purge/PurgeExecution', {
+          //   method: 'POST',
+          //   headers: {
+          //     'Content-Type': 'application/json',
+          //   },
+          //   body: JSON.stringify(postData),
+          // })
+          //   .then((response) => response.json())
+          //   .then((data) => {
+          //     console.log('Success:', data);
+          //   })
+          //   .catch((error) => {
+          //     console.errer('Error:', error);
+          //   });
+          // CORS(Cross-Origin Resource Sharing) 정책에 의해 막힘.
+          // 서버 프록시 타겟을 우회하도록 수정 하거나 혹은 새창으로 열면서 호출하도록 수정 필요해 보임.
+          // 로컬서버 프록시 셋팅 참고 https://evan-moon.github.io/2020/05/21/about-cors/
+
+          // const purgeList = images.map(async (item, index) => {
+          //   const data = await fetch(purgeAPI + item);
+          //   const isComplete = (await document.querySelector('result_code').textContent) === '200';
+          //   return [data, isComplete ? 'complete' : 'error'];
+          // });
+          // setImages(purgeList);
+        }
+
+        function reset() {
+          setIsDisable(false);
+          setInsertText('');
+          setImages([]);
+        }
+        return (
+          <div className="purge-wrap">
+            <textarea value={insertText} onChange={insertChange} className="textarea" disabled={isDisable}></textarea>
+            <button className="submit" onClick={apiCall}>
+              submit
+            </button>
+            <button className="reset" onClick={reset}>
+              reset
+            </button>
+            {!images.length || images[0] === ''
+              ? null
+              : (() => {
+                  return (
+                    <div>
+                      <ul className="purge-list">
+                        {images.map((item) => (
+                          <li className="purge-item">
+                            <span>{item[0]}</span>
+                            <span>{item[1]}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                })()}
+          </div>
+        );
+      }
+
+      root.render(<App />);
+    </script>
+  </body>
+</html>
