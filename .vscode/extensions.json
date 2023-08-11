@@ -1,5 +1,9 @@
 {
-    "recommendations": [
-        "SimonSiefke.prettier-vscode"
-    ]
+  "recommendations": [
+    "stylelint.vscode-stylelint",
+    "dbaeumer.vscode-eslint",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "html-validate.vscode-html-validate"
+  ]
 }

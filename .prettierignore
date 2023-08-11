@@ -1,8 +1,6 @@
 node_modules/
-webpack.config.js
-package.json
-gulpfile.babel.js
-
-index.html
-header.html
-footer.html
+dist/
+src/layout/*
+package-lock.json
+*.min.*
+*-min.*
