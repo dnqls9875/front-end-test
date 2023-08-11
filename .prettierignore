@@ -1,6 +1,0 @@
-node_modules/
-dist/
-src/layout/*
-package-lock.json
-*.min.*
-*-min.*
