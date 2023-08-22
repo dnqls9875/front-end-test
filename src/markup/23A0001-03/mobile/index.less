@@ -1,0 +1,41 @@
+@import "../../../assets/_vendor/_aos.less";
+@import "../../../assets/css/_m_common.less";
+
+.util(@width, @left, @top, @base: 750) {
+  display: block;
+  position: absolute;
+  left: (@left / @base * 100%);
+  top: 0;
+  margin-top: (@top / @base * 100%);
+  width: (@width / @base * 100%);
+  z-index: 4;
+}
+
+.hausys-cttd-guide {
+  [data-aos="zoom-out"] {
+    filter: blur(50px);
+    transition-property: opacity, transform, filter;
+  }
+  [data-aos="zoom-out"].aos-animate {
+    filter: blur(0);
+  }
+  [data-io^="fade"] {
+    opacity: 0;
+    transition: opacity 0.6s linear;
+    transition-delay: var(--io-delay, 0.1s);
+  }
+  [data-io^="fade"].io-animation {
+    opacity: 1;
+    animation: cloud-obj 3s ease-out 1s infinite;
+  }
+  .full-fix-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .hausys-cttd-ctns-main {
+    overflow: hidden;
+  }
+}
