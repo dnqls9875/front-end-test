@@ -1,7 +1,7 @@
 @import "../../../assets/_vendor/_aos.less";
 @import "../../../assets/css/_m_common.less";
 
-.util(@width, @left, @top, @base: 750) {
+.util(@width, @left, @top, @base: 680) {
   display: block;
   position: absolute;
   left: (@left / @base * 100%);
@@ -58,7 +58,7 @@
   }
   .hausys-cttd-ctns-main {
     overflow: hidden;
-    // padding-bottom: ._750(2500) [ @result];
+    // padding-bottom: ._680(2500) [ @result];
 
     .m-main-bg-txt {
       overflow: hidden;
@@ -67,15 +67,15 @@
       left: 0;
       z-index: 1;
       width: 0;
-      height: ._750(761) [ @result];
+      height: ._680(761) [ @result];
       transition: width 1.2s ease-out;
 
       &.aos-animate {
-        width: ._750(750) [ @result];
+        width: ._680(680) [ @result];
       }
       img {
-        width: (750 / 750 * 100vw);
-        max-width: 750px;
+        width: (680 / 680 * 100vw);
+        max-width: 680px;
       }
     }
 
@@ -139,27 +139,27 @@
         "맑은고딕", "Dotum", "돋움", "Gulim", "굴림", "Arial", sans-serif;
 
       &-01 {
-        padding-bottom: ._750(10) [ @result];
+        padding-bottom: ._680(10) [ @result];
       }
     }
 
     // 코오롱몰 결제 혜택 --------------------------------
     .hausys-cttd-ctns-main-01 {
       position: relative;
-      padding-bottom: ._750(674) [ @result];
+      padding-bottom: ._680(674) [ @result];
 
       .m-01-obj {
         &-01 {
-          .util(750, 0, 0);
+          .util(680, 0, 0);
         }
         &-02 {
-          .util(750, 0, 257);
+          .util(680, 0, 257);
         }
         &-03 {
-          .util(750, 0, 257);
+          .util(680, 0, 257);
         }
         &-04 {
-          .util(750, 0, 257);
+          .util(680, 0, 257);
         }
       }
 
@@ -179,7 +179,7 @@
 
       .m-02-obj {
         &-01 {
-          .util(750, 0, 0);
+          .util(680, 0, 0);
         }
       }
 
@@ -204,18 +204,18 @@
         display: flex;
         flex-flow: column wrap;
         justify-content: space-around;
-        width: ._750(670) [ @result];
+        width: ._680(670) [ @result];
         margin: 0 auto;
-        padding-top: ._750(256) [ @result];
+        padding-top: ._680(256) [ @result];
         z-index: 99;
 
         &__item {
           position: relative;
           z-index: 99;
           width: 100%;
-          padding-bottom: ._750(25) [ @result];
+          padding-bottom: ._680(25) [ @result];
           &:last-child {
-            margin-bottom: ._750(90) [ @result];
+            margin-bottom: ._680(90) [ @result];
           }
           a {
             display: flex;
@@ -287,10 +287,10 @@
       box-sizing: border-box;
       width: 100%;
       height: 100%;
-      padding-bottom: ._750(30) [ @result];
-      padding-top: ._750(30) [ @result];
+      padding-bottom: ._680(30) [ @result];
+      padding-top: ._680(30) [ @result];
       img {
-        width: ._750(236) [ @result];
+        width: ._680(236) [ @result];
       }
 
       img:nth-child(1) {
@@ -313,7 +313,7 @@
     }
 
     &__contents {
-      padding: ._750(80) [ @result] ._750(40) [ @result] ._750(75) [ @result];
+      padding: ._680(80) [ @result] ._680(40) [ @result] ._680(75) [ @result];
       text-align: left;
 
       ul {
@@ -590,11 +590,11 @@
       display: flex;
       flex-wrap: wrap;
       margin: 0 auto;
-      width: ._750(@listWidth) [ @result];
+      width: ._680(@listWidth) [ @result];
       position: absolute;
       top: 0;
-      left: ._750(40) [ @result];
-      margin-top: ._750(264) [ @result];
+      left: ._680(40) [ @result];
+      margin-top: ._680(264) [ @result];
 
       &__item {
         box-sizing: border-box;
@@ -709,14 +709,14 @@
   }
 }
 
-@media only all and (min-width: 750px) {
+@media only all and (min-width: 680px) {
   .hausys-cttd-guide {
     .hausys-cttd-tab {
       .hausys-cttd-tab(@tabHeight: 90px);
 
       .hausys-cttd-tab__inner {
         .hausys-cttd-tab__list {
-          width: 750px;
+          width: 680px;
           height: 90px;
         }
 
