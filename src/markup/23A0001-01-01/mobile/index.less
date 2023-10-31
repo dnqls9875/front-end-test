@@ -22,8 +22,46 @@
   .hausys-cttd-inner {
     position: relative;
   }
-
   .hausys-cttd-ctns-main {
     overflow: hidden;
+  }
+}
+
+@media only all and (min-width: 750px) {
+  .hausys-cttd-guide {
+    .hausys-cttd-ctns-main {
+      .stretch_text {
+        font-size: 28px;
+        line-height: 28px;
+      }
+      .main-title {
+        .superpick-list__text {
+          font-size: 27px;
+          line-height: 27px;
+        }
+      }
+    }
+
+    .hausys-cttd-ctns-main
+      .hausys-cttd-ctns-main-02
+      .superpick-list__text
+      .hausys-cttd-ctns-02 {
+      .super-pick-list__text {
+        font-size: 30px;
+        line-height: 40px;
+      }
+    }
+    .hausys-cttd-ctns-etc {
+      .goods-list__text {
+        font-size: 26px;
+        line-height: 32px;
+      }
+    }
+    .hausys-cttd-info li {
+      font-size: 26px;
+      &::after {
+        font-size: 26px;
+      }
+    }
   }
 }
